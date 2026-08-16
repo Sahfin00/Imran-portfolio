@@ -1,17 +1,16 @@
 import { motion } from "motion/react";
 import { ArrowDown, Linkedin, Mail } from "lucide-react";
 
-import portrait from "@/assets/imran-portrait.jpg";
 import { heroStats, profile } from "@/data/portfolio";
-import { CircuitField } from "./CircuitField";
 import { Counter } from "./primitives";
 
 const words = profile.headline.split(" ");
+const portraitUrl = "https://i.postimg.cc/Xq6zg2kj/frmlphto.png";
 
 export function Hero() {
   return (
     <section id="home" className="relative overflow-hidden px-5 pt-28 pb-16 sm:px-8 md:pt-36 md:pb-24">
-      <CircuitField />
+
       <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 md:grid-cols-[1.15fr_0.85fr] md:gap-16">
         <div>
           <motion.p
@@ -92,7 +91,7 @@ export function Hero() {
           <div className="absolute -inset-4 rounded-[2.5rem] opacity-30 [background:var(--gradient-brand)] blur-2xl" />
           <div className="relative overflow-hidden rounded-[2rem] border border-line bg-surface shadow-[var(--shadow-lift)]">
             <motion.img
-              src={portrait}
+              src={portraitUrl}
               width={1024}
               height={1280}
               alt="Portrait of Md. Imran Hossain, EEE student at CUET"
