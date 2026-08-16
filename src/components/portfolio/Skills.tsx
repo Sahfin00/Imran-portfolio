@@ -7,7 +7,7 @@ import { Reveal, Section } from "./primitives";
 
 export function Skills() {
   const [active, setActive] = useState(0);
-  const group = skillGroups[active];
+  const group = skillGroups[active] ?? skillGroups[0]!;
 
   return (
     <Section
