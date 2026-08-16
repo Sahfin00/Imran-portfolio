@@ -111,7 +111,7 @@ export function Hero() {
         </motion.div>
       </div>
 
-      <div className="relative mx-auto mt-16 w-full max-w-6xl md:mt-20">
+      <div className="relative mx-auto mt-14 w-full max-w-6xl">
         <div className="grid gap-4 sm:grid-cols-3">
           {heroStats.map((s, i) => (
             <motion.div
@@ -131,7 +131,7 @@ export function Hero() {
 
         <a
           href="#about"
-          className="mt-12 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-ink-soft transition-colors hover:text-brand"
+          className="mt-10 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-ink-soft transition-colors hover:text-brand"
         >
           Scroll to explore
           <ArrowDown className="h-3.5 w-3.5 animate-bounce" />
