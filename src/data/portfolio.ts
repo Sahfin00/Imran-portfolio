@@ -13,8 +13,8 @@ export const profile = {
   headline: "Engineering ideas into possibilities.",
   intro:
     "I'm an Electrical & Electronic Engineering undergraduate at CUET, building experience across engineering, technology, leadership, organizational activities and professional development — one project, one responsibility, one lesson at a time.",
-  email: "imran.hossain.eee@example.com",
-  linkedin: "https://www.linkedin.com/",
+  email: "u2302131@student.cuet.ac.bd",
+  linkedin: "https://www.linkedin.com/in/imrancueteee/",
 };
 
 export const navSections = [
@@ -56,11 +56,27 @@ export const education = [
     period: "Batch 2023 — Expected Graduation 2028",
     status: "Ongoing",
     details: [
-      { label: "CGPA", value: "To be added" },
-      { label: "Relevant coursework", value: "To be added" },
-      { label: "Academic achievements", value: "To be added" },
-      { label: "Research interests", value: "To be added" },
-      { label: "Laboratory experience", value: "To be added" },
+      { label: "CGPA", value: "3.91 / 4.00" },
+      {
+        label: "Relevant coursework",
+        value:
+          "Electrical Circuits, Electronics, Electrical Machines, Power Systems, Control Systems, Signals & Systems, Electromagnetic Fields, Digital Electronics, Engineering Mathematics, Numerical Methods, Power Electronics",
+      },
+      {
+        label: "Academic achievements",
+        value:
+          "Maintaining a strong 3.91 CGPA while actively participating in technical projects, professional organizations, leadership activities, and career-development programs.",
+      },
+      {
+        label: "Research interests",
+        value:
+          "Electrical & Electronic Engineering, Power & Energy Systems, Electrical Machines, Power Electronics, Renewable Energy, Embedded Systems, Electronics, and emerging engineering technologies.",
+      },
+      {
+        label: "Laboratory experience",
+        value:
+          "Hands-on experience with electrical and electronic laboratory work, including circuit analysis and simulation, electronics, electrical machines, transformers, synchronous generators, measurement and instrumentation, and engineering design projects. Experience using Proteus, LTspice, and MATLAB for simulation, analysis, and technical work.",
+      },
     ],
   },
 ];
@@ -243,8 +259,8 @@ export const professionalDevelopment = [
   {
     year: "2026",
     title: "Aspire Leaders Program",
-    org: "Harvard Business School",
-    note: "Global leadership development program for undergraduate students.",
+    org: "Harvard University — Harvard Business School",
+    note: "Selected for a global leadership development program featuring learning and guidance from Harvard faculty and professors, focused on leadership, communication, critical thinking, professional development, and personal growth. Participated in collaborative learning with students from diverse backgrounds and perspectives.",
   },
 ];
 
