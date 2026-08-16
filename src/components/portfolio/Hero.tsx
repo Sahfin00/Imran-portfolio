@@ -91,7 +91,7 @@ export function Hero() {
           <div className="absolute -inset-4 rounded-[2.5rem] opacity-30 [background:var(--gradient-brand)] blur-2xl" />
           <div className="relative overflow-hidden rounded-[2rem] border border-line bg-surface shadow-[var(--shadow-lift)]">
             <motion.img
-              src={portrait}
+              src={portraitUrl}
               width={1024}
               height={1280}
               alt="Portrait of Md. Imran Hossain, EEE student at CUET"
