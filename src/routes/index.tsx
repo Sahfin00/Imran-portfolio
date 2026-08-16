@@ -1,24 +1,59 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+import { Toaster } from "@/components/ui/sonner";
+import { About } from "@/components/portfolio/About";
+import { Achievements } from "@/components/portfolio/Achievements";
+import { Contact } from "@/components/portfolio/Contact";
+import { Development } from "@/components/portfolio/Development";
+import { Education } from "@/components/portfolio/Education";
+import { Experience } from "@/components/portfolio/Experience";
+import { Footer } from "@/components/portfolio/Footer";
+import { Hero } from "@/components/portfolio/Hero";
+import { Journey } from "@/components/portfolio/Journey";
+import { Leadership } from "@/components/portfolio/Leadership";
+import { Projects } from "@/components/portfolio/Projects";
+import { SiteNav } from "@/components/portfolio/SiteNav";
+import { Skills } from "@/components/portfolio/Skills";
+import { StillBuilding } from "@/components/portfolio/StillBuilding";
+
+const title = "Md. Imran Hossain — EEE Student at CUET | Portfolio";
+const description =
+  "Portfolio of Md. Imran Hossain, Electrical & Electronic Engineering student at CUET (Batch 2023): engineering projects, leadership roles, achievements and professional development.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: description },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen overflow-x-hidden bg-background">
+      <SiteNav />
+      <main>
+        <Hero />
+        <About />
+        <Education />
+        <Journey />
+        <Experience />
+        <Projects />
+        <Leadership />
+        <Skills />
+        <Development />
+        <Achievements />
+        <StillBuilding />
+        <Contact />
+      </main>
+      <Footer />
+      <Toaster />
     </div>
   );
 }
