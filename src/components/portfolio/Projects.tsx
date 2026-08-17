@@ -1,20 +1,10 @@
 import { motion } from "motion/react";
 import { ArrowUpRight, CircuitBoard } from "lucide-react";
-import { useState } from "react";
 
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
-import { projects, type Project } from "@/data/portfolio";
+import { projects } from "@/data/portfolio";
 import { Reveal, Section, Tag } from "./primitives";
 
 export function Projects() {
-  const [openProject, setOpenProject] = useState<Project | null>(null);
-
   return (
     <Section
       id="projects"
@@ -55,43 +45,19 @@ export function Projects() {
                 </ul>
               </div>
 
-              <button
-                type="button"
-                onClick={() => setOpenProject(p)}
+              <a
+                href={p.reportUrl}
+                target="_blank"
+                rel="noreferrer noopener"
                 className="relative mt-6 inline-flex w-fit items-center gap-2 rounded-full border border-line bg-surface px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-brand/40 hover:text-brand-deep"
               >
                 View Project
                 <ArrowUpRight className="h-4 w-4" />
-              </button>
+              </a>
             </motion.article>
           </Reveal>
         ))}
       </div>
-
-      <Dialog open={!!openProject} onOpenChange={(o) => !o && setOpenProject(null)}>
-        <DialogContent className="max-h-[85vh] overflow-y-auto sm:max-w-2xl">
-          {openProject && (
-            <>
-              <DialogHeader>
-                <DialogTitle className="text-2xl">
-                  Project {openProject.index} — {openProject.title}
-                </DialogTitle>
-                <DialogDescription>{openProject.tagline}</DialogDescription>
-              </DialogHeader>
-              <dl className="mt-4 space-y-4">
-                {openProject.sections.map((s) => (
-                  <div key={s.label} className="rounded-2xl border border-line bg-secondary/50 p-4">
-                    <dt className="text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-brand">
-                      {s.label}
-                    </dt>
-                    <dd className="mt-1.5 text-sm leading-relaxed text-ink">{s.value}</dd>
-                  </div>
-                ))}
-              </dl>
-            </>
-          )}
-        </DialogContent>
-      </Dialog>
     </Section>
   );
 }
