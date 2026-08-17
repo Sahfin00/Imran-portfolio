@@ -137,6 +137,7 @@ export const involvement: Involvement[] = [
 ];
 
 export const leadership = [
+  // leadership roles
   {
     org: "CUET Career Club",
     role: "Executive Member",
@@ -165,6 +166,7 @@ export const leadership = [
 ];
 
 export const leadershipSkills = [
+  "Industrial Exposure",
   "Leadership",
   "Communication",
   "Teamwork",
