@@ -1,12 +1,30 @@
 import { Linkedin, Mail, Send } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import emailjs from "@emailjs/browser";
+import { z } from "zod";
 
 import { profile } from "@/data/portfolio";
 import { Reveal, Section } from "./primitives";
 
-const ENDPOINT =
-  "https://script.google.com/macros/s/AKfycbzPtP2Vif2eeBkR92XfZtg8KQoMbBzITGdg5VqQrp0YOQOqrJH5iIJhHyUmVTEByl_WHA/exec";
+const EMAILJS_PUBLIC_KEY = "oedQVtLuIwVl4h2Gi";
+const EMAILJS_SERVICE_ID = "service_cx8c8jr";
+const EMAILJS_TEMPLATE_ID = "template_8m61s8c";
+
+const contactSchema = z.object({
+  name: z.string().trim().min(1, "Please enter your name").max(100, "Name is too long"),
+  email: z
+    .string()
+    .trim()
+    .min(1, "Please enter your email")
+    .email("Please enter a valid email address")
+    .max(255, "Email is too long"),
+  message: z
+    .string()
+    .trim()
+    .min(1, "Please write a message")
+    .max(2000, "Message must be under 2000 characters"),
+});
 
 export function Contact() {
   const [sending, setSending] = useState(false);
@@ -60,19 +78,26 @@ export function Contact() {
               if (sending) return;
               const form = e.currentTarget;
               const data = new FormData(form);
-              const payload = {
+              const parsed = contactSchema.safeParse({
                 name: String(data.get("name") ?? ""),
                 email: String(data.get("email") ?? ""),
-                subject: `Portfolio enquiry from ${data.get("name")}`,
                 message: String(data.get("message") ?? ""),
+              });
+              if (!parsed.success) {
+                toast.error(parsed.error.issues[0]?.message ?? "Please check your details.");
+                return;
+              }
+              const payload = {
+                name: parsed.data.name,
+                email: parsed.data.email,
+                subject: `Portfolio enquiry from ${parsed.data.name}`,
+                message: parsed.data.message,
+                reply_to: parsed.data.email,
               };
               setSending(true);
               try {
-                await fetch(ENDPOINT, {
-                  method: "POST",
-                  mode: "no-cors",
-                  headers: { "Content-Type": "text/plain;charset=utf-8" },
-                  body: JSON.stringify(payload),
+                await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, payload, {
+                  publicKey: EMAILJS_PUBLIC_KEY,
                 });
                 toast.success("Message sent — I'll get back to you soon.");
                 form.reset();
