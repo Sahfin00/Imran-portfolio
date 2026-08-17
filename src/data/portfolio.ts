@@ -137,7 +137,6 @@ export const involvement: Involvement[] = [
 ];
 
 export const leadership = [
-  // leadership roles
   {
     org: "CUET Career Club",
     role: "Executive Member",
@@ -166,7 +165,6 @@ export const leadership = [
 ];
 
 export const leadershipSkills = [
-  "Industrial Exposure",
   "Leadership",
   "Communication",
   "Teamwork",
@@ -319,4 +317,43 @@ export const stillBuilding = [
   { label: "Research interests", value: "To be defined through coursework and labs" },
   { label: "Technologies exploring", value: "Proteus, LTspice, MATLAB" },
   { label: "Upcoming goals", value: "Internships, technical competitions, research exposure" },
+];
+
+export type IndustrialTour = {
+  org: string;
+  location?: string;
+  date?: string;
+  summary: string;
+  photos: string[];
+};
+
+export const industrialTours: IndustrialTour[] = [
+  {
+    org: "General Electric Manufacturing Company Ltd. (GEMCO)",
+    summary:
+      "EEE department industrial tour providing practical exposure to electrical equipment manufacturing, industrial machinery, manufacturing processes, and real-world engineering practices.",
+    photos: [
+      "https://i.postimg.cc/rpThXsYN/gemco-01.jpg",
+      "https://i.postimg.cc/R0mP5hbd/gemco-02.jpg",
+      "https://i.postimg.cc/8CGyQcnX/gemco-03.jpg",
+      "https://i.postimg.cc/VNw7QvHK/gemco-04.jpg",
+      "https://i.postimg.cc/5tJPdykZ/gemco-05.jpg",
+      "https://i.postimg.cc/7L4B8hQc/gemco-06.jpg",
+    ],
+  },
+  {
+    org: "Transcom Beverages Ltd.",
+    location: "Chattogram",
+    date: "4 July 2026",
+    summary:
+      "Industrial tour providing exposure to beverage manufacturing, production processes, quality control, industrial operations, and practical application of engineering principles in large-scale manufacturing.",
+    photos: [
+      "https://i.postimg.cc/kgQcc9Xc/transcom-01.jpg",
+      "https://i.postimg.cc/RZ7RR9V8/transcom-02.jpg",
+      "https://i.postimg.cc/13GHHP5d/transcom-03.jpg",
+      "https://i.postimg.cc/y8mPPBYb/transcom-04.jpg",
+      "https://i.postimg.cc/fRcKKZTg/transcom-05.jpg",
+      "https://i.postimg.cc/W4s7YKh9/transcom-06.jpg",
+    ],
+  },
 ];
