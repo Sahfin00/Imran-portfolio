@@ -179,6 +179,7 @@ export type Project = {
   title: string;
   tagline: string;
   tags: string[];
+  reportUrl: string;
   sections: { label: string; value: string }[];
 };
 
@@ -188,6 +189,8 @@ export const projects: Project[] = [
     title: "PIR Sensor Security Alarm",
     tagline: "An electronics security project built around a PIR motion sensor alarm system.",
     tags: ["Electronics", "Sensors", "Security"],
+    reportUrl:
+      "https://drive.google.com/file/d/1vyz71Ur905xSeIg3DPr7u1U9UPn6TEnW/view?usp=sharing",
     sections: [
       {
         label: "Overview",
@@ -207,6 +210,8 @@ export const projects: Project[] = [
     title: "63 kVA Transformer Design",
     tagline: "A completed electrical machine design project covering a 63 kVA transformer.",
     tags: ["Power", "Machine Design", "Calculations"],
+    reportUrl:
+      "https://drive.google.com/file/d/1N1Tzq2UBUVzk3P-9OR_ul_PGadYCFQjn/view?usp=sharing",
     sections: [
       { label: "Design objective", value: "To be added" },
       { label: "Design methodology", value: "To be added" },
