@@ -5,6 +5,9 @@ import { toast } from "sonner";
 import { profile } from "@/data/portfolio";
 import { Reveal, Section } from "./primitives";
 
+const ENDPOINT =
+  "https://script.google.com/macros/s/AKfycbzPtP2Vif2eeBkR92XfZtg8KQoMbBzITGdg5VqQrp0YOQOqrJH5iIJhHyUmVTEByl_WHA/exec";
+
 export function Contact() {
   const [sending, setSending] = useState(false);
 
@@ -52,16 +55,32 @@ export function Contact() {
         <Reveal delay={0.08} className="surface-card p-6 sm:p-8">
           <form
             className="grid gap-4 sm:grid-cols-2"
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault();
+              if (sending) return;
               const form = e.currentTarget;
-              setSending(true);
               const data = new FormData(form);
-              const subject = encodeURIComponent(`Portfolio enquiry from ${data.get("name")}`);
-              const body = encodeURIComponent(`${data.get("message")}\n\n— ${data.get("name")} (${data.get("email")})`);
-              window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`;
-              toast.success("Opening your email client…");
-              setSending(false);
+              const payload = {
+                name: String(data.get("name") ?? ""),
+                email: String(data.get("email") ?? ""),
+                subject: `Portfolio enquiry from ${data.get("name")}`,
+                message: String(data.get("message") ?? ""),
+              };
+              setSending(true);
+              try {
+                await fetch(ENDPOINT, {
+                  method: "POST",
+                  mode: "no-cors",
+                  headers: { "Content-Type": "text/plain;charset=utf-8" },
+                  body: JSON.stringify(payload),
+                });
+                toast.success("Message sent — I'll get back to you soon.");
+                form.reset();
+              } catch {
+                toast.error("Couldn't send your message. Please email me directly.");
+              } finally {
+                setSending(false);
+              }
             }}
           >
             <Field label="Name" name="name" placeholder="Your name" />
@@ -83,7 +102,7 @@ export function Contact() {
               disabled={sending}
               className="inline-flex w-fit items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition-transform hover:-translate-y-0.5 disabled:opacity-60 [background:var(--gradient-brand)] sm:col-span-2"
             >
-              Send message
+              {sending ? "Sending…" : "Send message"}
               <Send className="h-4 w-4" />
             </button>
           </form>
