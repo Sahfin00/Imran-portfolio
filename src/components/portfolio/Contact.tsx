@@ -5,6 +5,9 @@ import { toast } from "sonner";
 import { profile } from "@/data/portfolio";
 import { Reveal, Section } from "./primitives";
 
+const ENDPOINT =
+  "https://script.google.com/macros/s/AKfycbzPtP2Vif2eeBkR92XfZtg8KQoMbBzITGdg5VqQrp0YOQOqrJH5iIJhHyUmVTEByl_WHA/exec";
+
 export function Contact() {
   const [sending, setSending] = useState(false);
 
