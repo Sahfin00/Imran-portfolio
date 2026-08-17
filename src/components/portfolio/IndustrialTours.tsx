@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Factory, MapPin, X } from "lucide-react";
+import { Factory, MapPin } from "lucide-react";
 import { useState } from "react";
 
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";

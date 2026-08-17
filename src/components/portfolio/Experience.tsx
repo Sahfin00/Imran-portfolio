@@ -1,6 +1,7 @@
 import { Award } from "lucide-react";
 
 import { involvement } from "@/data/portfolio";
+import { IndustrialTours } from "./IndustrialTours";
 import { Reveal, Section } from "./primitives";
 
 export function Experience() {
@@ -47,6 +48,7 @@ export function Experience() {
           ))}
         </div>
       </div>
+      <IndustrialTours />
     </Section>
   );
 }
