@@ -137,6 +137,7 @@ export const involvement: Involvement[] = [
 ];
 
 export const leadership = [
+  ];
   {
     org: "CUET Career Club",
     role: "Executive Member",
