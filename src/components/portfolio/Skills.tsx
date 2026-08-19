@@ -48,11 +48,6 @@ export function Skills() {
                 className="inline-flex items-center gap-2 rounded-full border border-line bg-secondary/70 px-4 py-2.5 text-sm font-medium text-ink transition-colors hover:border-brand/40 hover:bg-brand-soft"
               >
                 {item.name}
-                {"level" in item && item.level && (
-                  <span className="rounded-full bg-brand/12 px-2 py-0.5 text-[0.68rem] font-semibold text-brand-deep">
-                    {item.level}
-                  </span>
-                )}
               </motion.span>
             ))}
           </motion.div>
