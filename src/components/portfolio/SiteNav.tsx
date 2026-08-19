@@ -56,8 +56,14 @@ export function SiteNav() {
             height={72}
             className="h-9 w-9 shrink-0 rounded-full border border-line object-cover object-top shadow-[var(--shadow-soft)] sm:h-10 sm:w-10"
           />
-          <span className="hidden text-sm font-semibold text-ink sm:block">{profile.name}</span>
+        <span className="hidden text-sm font-semibold text-ink sm:block">{profile.name}</span>
         </a>
+
+        <div className="flex-1 px-2 md:hidden">
+          <span className="block truncate text-center text-sm font-semibold text-ink">
+            {profile.name}
+          </span>
+        </div>
 
         <ul className="hidden items-center gap-1 md:flex">
           {navSections.map((s) => (
