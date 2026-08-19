@@ -13,8 +13,8 @@ export function Skills() {
     <Section
       id="skills"
       eyebrow="Skills"
-      title="Capability, grouped honestly"
-      lead="No invented percentages — just the areas I work in, with a proficiency label where it is meaningful."
+      title="Skills & Competencies"
+      lead="What I currently work with, explore and continue to improve."
     >
       <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
         <Reveal className="flex flex-col gap-2">
