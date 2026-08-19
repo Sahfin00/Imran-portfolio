@@ -49,9 +49,13 @@ export function SiteNav() {
         aria-label="Primary"
       >
         <a href="#home" className="flex items-center gap-2.5">
-          <span className="grid h-9 w-9 place-items-center rounded-full text-sm font-bold text-primary-foreground [background:var(--gradient-brand)]">
-            IH
-          </span>
+          <img
+            src="https://i.postimg.cc/Xq6zg2kj/frmlphto.png"
+            alt="Md. Imran Hossain"
+            width={72}
+            height={72}
+            className="h-9 w-9 shrink-0 rounded-full border border-line object-cover object-top shadow-[var(--shadow-soft)] sm:h-10 sm:w-10"
+          />
           <span className="hidden text-sm font-semibold text-ink sm:block">{profile.name}</span>
         </a>
 

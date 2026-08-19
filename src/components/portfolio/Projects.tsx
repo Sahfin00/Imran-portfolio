@@ -12,17 +12,16 @@ export function Projects() {
       title="Hands-on engineering work"
       lead="Electronics and design projects built during undergraduate study. Each entry grows as documentation, results and images are added."
     >
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid items-stretch gap-6 md:grid-cols-2">
         {projects.map((p, i) => (
-          <Reveal key={p.index} delay={i * 0.08}>
+          <Reveal key={p.index} delay={i * 0.08} className="h-full">
             <motion.article
-              whileHover={{ y: -8 }}
+              whileHover={{ y: -6 }}
               transition={{ type: "spring", stiffness: 280, damping: 24 }}
               className="group surface-card relative flex h-full flex-col overflow-hidden p-7"
             >
-              <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full opacity-0 transition-opacity duration-500 group-hover:opacity-100 [background:var(--gradient-glow)]" />
               <div className="relative flex items-start justify-between">
-                <span className="font-display text-4xl font-semibold text-brand/25">{p.index}</span>
+                <span className="font-display text-4xl font-semibold text-brand/60">{p.index}</span>
                 <span className="grid h-10 w-10 place-items-center rounded-xl bg-brand-soft text-brand-deep">
                   <CircuitBoard className="h-5 w-5" />
                 </span>
@@ -37,7 +36,7 @@ export function Projects() {
                 ))}
               </div>
 
-              <div className="relative mt-6 max-h-0 overflow-hidden opacity-0 transition-all duration-500 group-hover:max-h-40 group-hover:opacity-100 group-focus-within:max-h-40 group-focus-within:opacity-100">
+              <div className="relative mt-6">
                 <ul className="space-y-1.5 border-t border-line pt-4 text-xs text-ink-soft">
                   {p.sections.slice(0, 4).map((s) => (
                     <li key={s.label}>· {s.label}</li>
@@ -49,7 +48,7 @@ export function Projects() {
                 href={p.reportUrl}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="relative mt-6 inline-flex w-fit items-center gap-2 rounded-full border border-line bg-surface px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-brand/40 hover:text-brand-deep"
+                className="relative mt-auto pt-6 inline-flex w-fit items-center gap-2 text-sm font-semibold text-brand-deep transition-colors hover:text-brand"
               >
                 View Project
                 <ArrowUpRight className="h-4 w-4" />
