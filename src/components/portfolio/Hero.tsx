@@ -124,7 +124,7 @@ export function Hero() {
 
         <a
           href="#about"
-          className="mt-8 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-ink-soft transition-colors hover:text-brand"
+          className="mt-3 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-ink-soft transition-colors hover:text-brand"
         >
           Scroll to explore
           <ArrowDown className="h-3.5 w-3.5 animate-bounce" />
