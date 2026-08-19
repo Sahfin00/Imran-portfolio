@@ -9,7 +9,7 @@ export function About() {
       id="about"
       eyebrow="About"
       title="A young engineer in the process of becoming something bigger."
-      lead={`${profile.name} is an EEE undergraduate at CUET, developing across engineering, technology, leadership, professional activities and continuous learning. This portfolio is an ongoing journey — not a finished profile.`}
+      lead={`${profile.name} is an undergraduate in Electrical & Electronic Engineering (EEE) at Chittagong University of Engineering & Technology (CUET), pursuing interests across engineering, technology and professional development while gaining experience through technical projects, leadership roles, organizational activities and industry exposure.`}
     >
       <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
         <Reveal className="surface-card p-6 sm:p-8">
