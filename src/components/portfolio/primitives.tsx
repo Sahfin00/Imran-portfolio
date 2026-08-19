@@ -44,10 +44,10 @@ export function Section({
   className?: string;
 }) {
   return (
-    <section id={id} className={cn("relative scroll-mt-24 px-5 py-20 sm:px-8 md:py-28", className)}>
+    <section id={id} className={cn("relative scroll-mt-24 px-5 py-12 sm:px-8 md:py-16", className)}>
       <div className="mx-auto w-full max-w-6xl">
         {(eyebrow || title) && (
-          <Reveal className="mb-10 max-w-2xl md:mb-14">
+          <Reveal className="mb-8 max-w-2xl md:mb-10">
             {eyebrow && <p className="eyebrow">{eyebrow}</p>}
             {title && (
               <h2 className="mt-3 text-3xl font-semibold text-ink sm:text-4xl md:text-[2.75rem] md:leading-[1.1]">

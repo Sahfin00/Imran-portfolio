@@ -42,8 +42,8 @@ export const currentlyExploring = [
 ];
 
 export const aboutMilestones = [
-  { year: "2023", title: "Joined CUET" },
-  { year: "2024", title: "Engineering Projects" },
+  { year: "2024", title: "Joined CUET" },
+  { year: "2025", title: "Engineering Projects" },
   { year: "2025", title: "Leadership & Organizations" },
   { year: "2026", title: "Professional Development" },
   { year: "2028", title: "Career / Higher Studies" },
@@ -123,7 +123,7 @@ export const involvement: Involvement[] = [
   {
     role: "Executive Member",
     org: "IEEE CUET Student Branch",
-    period: "2026",
+    period: "Ongoing",
     points: [
       "Involvement with a recognized technical and professional student organization",
     ],
@@ -131,7 +131,7 @@ export const involvement: Involvement[] = [
   {
     role: "Executive Member",
     org: "Green For Peace",
-    period: "2026",
+    period: "Ongoing",
     points: ["Community engagement and volunteer-led initiatives"],
   },
 ];
@@ -237,7 +237,7 @@ export const skillGroups = [
   },
   {
     title: "Programming",
-    items: [{ name: "C" }, { name: "C++" }, { name: "Python", level: "Intermediate" }, { name: "MATLAB" }],
+    items: [{ name: "C" }, { name: "C++" }, { name: "Python" }, { name: "MATLAB" }],
   },
   {
     title: "Engineering Tools",
@@ -282,11 +282,11 @@ export const achievements = [
 
 export const journey = [
   {
-    year: "2023",
+    year: "2024",
     items: ["Began the EEE journey at CUET"],
   },
   {
-    year: "2024 — 2026",
+    year: "2025 — 2026",
     items: [
       "Career Club involvement",
       "Career Fest participation",
@@ -298,8 +298,6 @@ export const journey = [
     year: "2026",
     items: [
       "JobSpecs Campus Ambassador",
-      "140 CVs collected",
-      "Best Campus Ambassador",
       "IEEE CUET Student Branch",
       "Green For Peace",
       "Aspire Leaders Program",
