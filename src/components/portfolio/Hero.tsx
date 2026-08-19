@@ -9,7 +9,7 @@ const portraitUrl = "https://i.postimg.cc/Xq6zg2kj/frmlphto.png";
 
 export function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden px-5 pt-28 pb-16 sm:px-8 md:pt-36 md:pb-24">
+    <section id="home" className="relative overflow-hidden px-5 pt-28 pb-12 sm:px-8 md:pt-32 md:pb-16">
 
       <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 md:grid-cols-[1.15fr_0.85fr] md:gap-16">
         <div>
@@ -101,16 +101,10 @@ export function Hero() {
               transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
             />
           </div>
-          <div className="surface-card absolute -bottom-6 -left-4 px-4 py-3 sm:-left-8">
-            <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-ink-soft">
-              Best Campus Ambassador
-            </p>
-            <p className="text-sm font-semibold text-brand-deep">JobSpecs 2026</p>
-          </div>
         </motion.div>
       </div>
 
-      <div className="relative mx-auto mt-14 w-full max-w-6xl">
+      <div className="relative mx-auto mt-12 w-full max-w-6xl">
         <div className="grid gap-4 sm:grid-cols-3">
           {heroStats.map((s, i) => (
             <motion.div
@@ -130,7 +124,7 @@ export function Hero() {
 
         <a
           href="#about"
-          className="mt-10 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-ink-soft transition-colors hover:text-brand"
+          className="mt-8 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-ink-soft transition-colors hover:text-brand"
         >
           Scroll to explore
           <ArrowDown className="h-3.5 w-3.5 animate-bounce" />
