@@ -57,7 +57,7 @@ export function About() {
                 </li>
               ))}
             </ul>
-            <p className="mt-6 text-xs text-ink-soft/80">
+            <p className="mt-6 text-xs text-ink-soft">
               This list is updated as interests, courses and goals evolve.
             </p>
           </Reveal>
@@ -66,7 +66,7 @@ export function About() {
             <p className="text-lg font-semibold leading-snug">
               &ldquo;Engineering is learned by building, failing, adjusting and building again.&rdquo;
             </p>
-            <p className="mt-4 text-sm opacity-85">
+            <p className="mt-4 text-sm opacity-95">
               A living portfolio documenting that process, year by year.
             </p>
           </Reveal>

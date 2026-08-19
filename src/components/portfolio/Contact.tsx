@@ -119,7 +119,7 @@ export function Contact() {
                 required
                 rows={4}
                 placeholder="Tell me about the opportunity or idea."
-                className="mt-2 w-full resize-none rounded-2xl border border-line bg-secondary/50 px-4 py-3 text-sm text-ink outline-none transition-colors placeholder:text-ink-soft/60 focus:border-brand/50"
+                className="mt-2 w-full resize-none rounded-2xl border border-line bg-secondary/50 px-4 py-3 text-sm text-ink outline-none transition-colors placeholder:text-ink-soft/80 focus:border-brand/50"
               />
             </label>
             <button
@@ -158,7 +158,7 @@ function Field({
         type={type}
         required
         placeholder={placeholder}
-        className="mt-2 w-full rounded-2xl border border-line bg-secondary/50 px-4 py-3 text-sm text-ink outline-none transition-colors placeholder:text-ink-soft/60 focus:border-brand/50"
+        className="mt-2 w-full rounded-2xl border border-line bg-secondary/50 px-4 py-3 text-sm text-ink outline-none transition-colors placeholder:text-ink-soft/80 focus:border-brand/50"
       />
     </label>
   );

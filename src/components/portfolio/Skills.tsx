@@ -31,7 +31,7 @@ export function Skills() {
               )}
             >
               {g.title}
-              <span className="text-xs font-medium opacity-70">{g.items.length}</span>
+              <span className="text-xs font-medium text-ink-soft">{g.items.length}</span>
             </button>
           ))}
         </Reveal>
