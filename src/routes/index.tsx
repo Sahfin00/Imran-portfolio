@@ -16,7 +16,7 @@ import { SiteNav } from "@/components/portfolio/SiteNav";
 import { Skills } from "@/components/portfolio/Skills";
 import { StillBuilding } from "@/components/portfolio/StillBuilding";
 
-const title = "Md. Imran Hossain | EEE CUET | Portfolio";
+const title = "Md. Imran Hossain | EEE CUET";
 const description =
   "Portfolio of Md. Imran Hossain, Electrical & Electronic Engineering student at CUET (Batch 2023): engineering projects, leadership roles, achievements and professional development.";
 
