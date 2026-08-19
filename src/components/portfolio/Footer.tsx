@@ -12,7 +12,7 @@ export function Footer() {
           <p className="mt-1 text-sm text-ink-soft">
             Electrical &amp; Electronic Engineering Student — CUET
           </p>
-          <p className="mt-4 text-sm italic text-brand">Built as a journey, not just a portfolio.</p>
+          <p className="mt-4 text-sm italic text-brand">Documenting the journey, one milestone at a time.</p>
         </div>
         <div className="flex flex-col gap-3 md:items-end">
           <div className="flex gap-3">
