@@ -9,7 +9,7 @@ const portraitUrl = "https://i.postimg.cc/Xq6zg2kj/frmlphto.png";
 
 export function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden px-5 pt-28 pb-4 sm:px-8 md:pt-32 md:pb-8">
+    <section id="home" className="relative overflow-hidden px-5 pt-28 pb-2 sm:px-8 md:pt-32 md:pb-4">
 
       <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 md:grid-cols-[1.15fr_0.85fr] md:gap-16">
         <div>
