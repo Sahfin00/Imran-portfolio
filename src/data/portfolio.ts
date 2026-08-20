@@ -283,6 +283,8 @@ export type ProgramEntry = {
   org: string;
   date: string;
   status: "upcoming" | "ongoing" | "completed";
+  /** Optional custom status wording, e.g. "Selected Participant". */
+  statusLabel?: string;
   description: string;
   topics: string[];
   certificateUrl?: string;
@@ -295,6 +297,7 @@ export const programs: ProgramEntry[] = [
     org: "Matsuo-Iwasawa Laboratory, The University of Tokyo",
     date: "September 2026",
     status: "upcoming",
+    statusLabel: "Selected Participant",
     description:
       "Selected through a competitive selection process to participate in GCI World 2026, an online program covering Data Science, Python, Statistics, and Machine Learning, conducted by the Matsuo-Iwasawa Laboratory at The University of Tokyo.",
     topics: ["Data Science", "Python", "Statistics", "Machine Learning"],
