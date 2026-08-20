@@ -270,7 +270,6 @@ export const professionalDevelopment = [
   },
 ];
 
-export const achievements = [
 /**
  * Programs, courses, certifications and workshops.
  * To add a new entry, copy an object below and fill it in.
