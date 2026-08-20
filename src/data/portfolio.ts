@@ -271,6 +271,37 @@ export const professionalDevelopment = [
 ];
 
 export const achievements = [
+/**
+ * Programs, courses, certifications and workshops.
+ * To add a new entry, copy an object below and fill it in.
+ * status: "upcoming" | "ongoing" | "completed"
+ * certificateUrl: leave undefined until you have the certificate file/link.
+ *   (put files in /public/certificates/ and use "/certificates/your-file.pdf")
+ */
+export type ProgramEntry = {
+  title: string;
+  org: string;
+  date: string;
+  status: "upcoming" | "ongoing" | "completed";
+  description: string;
+  topics: string[];
+  certificateUrl?: string;
+  programUrl?: string;
+};
+
+export const programs: ProgramEntry[] = [
+  {
+    title: "GCI World 2026 – September",
+    org: "Matsuo-Iwasawa Laboratory, The University of Tokyo",
+    date: "September 2026",
+    status: "upcoming",
+    description:
+      "Selected through a competitive selection process to participate in GCI World 2026, an online program covering Data Science, Python, Statistics, and Machine Learning, conducted by the Matsuo-Iwasawa Laboratory at The University of Tokyo.",
+    topics: ["Data Science", "Python", "Statistics", "Machine Learning"],
+  },
+];
+
+export const achievements = [
   {
     featured: true,
     title: "Best Campus Ambassador",
