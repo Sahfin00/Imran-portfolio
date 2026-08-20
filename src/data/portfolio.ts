@@ -261,15 +261,6 @@ export const skillGroups = [
   },
 ];
 
-export const professionalDevelopment = [
-  {
-    year: "2026",
-    title: "Aspire Leaders Program",
-    org: "Harvard University — Harvard Business School",
-    note: "Selected for a global leadership development program featuring learning and guidance from Harvard faculty and professors, focused on leadership, communication, critical thinking, professional development, and personal growth. Participated in collaborative learning with students from diverse backgrounds and perspectives.",
-  },
-];
-
 /**
  * Programs, courses, certifications and workshops.
  * To add a new entry, copy an object below and fill it in.
