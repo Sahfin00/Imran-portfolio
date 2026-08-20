@@ -4,7 +4,6 @@ import { Toaster } from "@/components/ui/sonner";
 import { About } from "@/components/portfolio/About";
 import { Achievements } from "@/components/portfolio/Achievements";
 import { Contact } from "@/components/portfolio/Contact";
-import { Development } from "@/components/portfolio/Development";
 import { Education } from "@/components/portfolio/Education";
 import { Experience } from "@/components/portfolio/Experience";
 import { Footer } from "@/components/portfolio/Footer";
@@ -49,7 +48,6 @@ function Index() {
         <Programs />
         <Leadership />
         <Skills />
-        <Development />
         <Achievements />
         <StillBuilding />
         <Contact />

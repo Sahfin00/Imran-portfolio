@@ -18,20 +18,29 @@ export function SiteNav() {
   }, []);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (visible) setActive(visible.target.id);
-      },
-      { rootMargin: "-45% 0px -50% 0px", threshold: [0.01, 0.2, 0.5] },
-    );
-    navSections.forEach((s) => {
-      const el = document.getElementById(s.id);
-      if (el) observer.observe(el);
-    });
-    return () => observer.disconnect();
+    const update = () => {
+      const line = window.innerHeight * 0.3;
+      let current: string = navSections[0].id;
+      for (const s of navSections) {
+        const el = document.getElementById(s.id);
+        if (!el) continue;
+        const rect = el.getBoundingClientRect();
+        if (rect.top <= line) current = s.id;
+      }
+      // At the very bottom, highlight the last available section.
+      if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 4) {
+        const last = [...navSections].reverse().find((s) => document.getElementById(s.id));
+        if (last) current = last.id;
+      }
+      setActive(current);
+    };
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => {
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
   }, []);
 
   return (

@@ -261,15 +261,6 @@ export const skillGroups = [
   },
 ];
 
-export const professionalDevelopment = [
-  {
-    year: "2026",
-    title: "Aspire Leaders Program",
-    org: "Harvard University — Harvard Business School",
-    note: "Selected for a global leadership development program featuring learning and guidance from Harvard faculty and professors, focused on leadership, communication, critical thinking, professional development, and personal growth. Participated in collaborative learning with students from diverse backgrounds and perspectives.",
-  },
-];
-
 /**
  * Programs, courses, certifications and workshops.
  * To add a new entry, copy an object below and fill it in.
@@ -300,6 +291,21 @@ export const programs: ProgramEntry[] = [
     description:
       "Selected through a competitive selection process to participate in GCI World 2026, an online program covering Data Science, Python, Statistics, and Machine Learning, conducted by the Matsuo-Iwasawa Laboratory at The University of Tokyo.",
     topics: ["Data Science", "Python", "Statistics", "Machine Learning"],
+  },
+  {
+    title: "Aspire Leaders Program",
+    org: "Harvard University — Harvard Business School",
+    date: "2026",
+    status: "ongoing",
+    description:
+      "Selected for a global leadership development program featuring learning and guidance from Harvard faculty and professors, focused on leadership, communication, critical thinking, professional development, and personal growth. Participating in collaborative learning with students from diverse backgrounds and perspectives.",
+    topics: [
+      "Leadership",
+      "Communication",
+      "Critical Thinking",
+      "Professional Development",
+      "Personal Growth",
+    ],
   },
 ];
 
