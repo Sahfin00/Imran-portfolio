@@ -20,7 +20,7 @@ export function SiteNav() {
   useEffect(() => {
     const update = () => {
       const line = window.innerHeight * 0.3;
-      let current = navSections[0].id;
+      let current: string = navSections[0].id;
       for (const s of navSections) {
         const el = document.getElementById(s.id);
         if (!el) continue;
