@@ -22,6 +22,7 @@ export const navSections = [
   { id: "about", label: "About" },
   { id: "journey", label: "Journey" },
   { id: "projects", label: "Projects" },
+  { id: "programs", label: "Programs" },
   { id: "leadership", label: "Leadership" },
   { id: "achievements", label: "Achievements" },
   { id: "contact", label: "Contact" },
@@ -266,6 +267,39 @@ export const professionalDevelopment = [
     title: "Aspire Leaders Program",
     org: "Harvard University — Harvard Business School",
     note: "Selected for a global leadership development program featuring learning and guidance from Harvard faculty and professors, focused on leadership, communication, critical thinking, professional development, and personal growth. Participated in collaborative learning with students from diverse backgrounds and perspectives.",
+  },
+];
+
+/**
+ * Programs, courses, certifications and workshops.
+ * To add a new entry, copy an object below and fill it in.
+ * status: "upcoming" | "ongoing" | "completed"
+ * certificateUrl: leave undefined until you have the certificate file/link.
+ *   (put files in /public/certificates/ and use "/certificates/your-file.pdf")
+ */
+export type ProgramEntry = {
+  title: string;
+  org: string;
+  date: string;
+  status: "upcoming" | "ongoing" | "completed";
+  /** Optional custom status wording, e.g. "Selected Participant". */
+  statusLabel?: string;
+  description: string;
+  topics: string[];
+  certificateUrl?: string;
+  programUrl?: string;
+};
+
+export const programs: ProgramEntry[] = [
+  {
+    title: "GCI World 2026 – September",
+    org: "Matsuo-Iwasawa Laboratory, The University of Tokyo",
+    date: "September 2026",
+    status: "upcoming",
+    statusLabel: "Selected Participant",
+    description:
+      "Selected through a competitive selection process to participate in GCI World 2026, an online program covering Data Science, Python, Statistics, and Machine Learning, conducted by the Matsuo-Iwasawa Laboratory at The University of Tokyo.",
+    topics: ["Data Science", "Python", "Statistics", "Machine Learning"],
   },
 ];
 

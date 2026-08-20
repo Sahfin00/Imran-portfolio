@@ -12,6 +12,7 @@ import { Hero } from "@/components/portfolio/Hero";
 import { Journey } from "@/components/portfolio/Journey";
 import { Leadership } from "@/components/portfolio/Leadership";
 import { Projects } from "@/components/portfolio/Projects";
+import { Programs } from "@/components/portfolio/Programs";
 import { SiteNav } from "@/components/portfolio/SiteNav";
 import { Skills } from "@/components/portfolio/Skills";
 import { StillBuilding } from "@/components/portfolio/StillBuilding";
@@ -45,6 +46,7 @@ function Index() {
         <Journey />
         <Experience />
         <Projects />
+        <Programs />
         <Leadership />
         <Skills />
         <Development />
