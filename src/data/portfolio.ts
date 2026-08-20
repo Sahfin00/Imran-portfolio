@@ -22,6 +22,7 @@ export const navSections = [
   { id: "about", label: "About" },
   { id: "journey", label: "Journey" },
   { id: "projects", label: "Projects" },
+  { id: "programs", label: "Programs" },
   { id: "leadership", label: "Leadership" },
   { id: "achievements", label: "Achievements" },
   { id: "contact", label: "Contact" },
