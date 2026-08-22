@@ -59,8 +59,10 @@ export function SiteNav() {
       >
         <a href="#home" className="flex items-center gap-2.5">
           <img
-            src="https://i.postimg.cc/Xq6zg2kj/frmlphto.png"
-            alt="Md. Imran Hossain"
+            src="/profile-avatar.webp"
+            alt="Md. Imran Hossain, EEE student at CUET"
+            fetchPriority="high"
+            decoding="async"
             width={72}
             height={72}
             className="h-9 w-9 shrink-0 rounded-full border border-line object-cover object-top shadow-[var(--shadow-soft)] sm:h-10 sm:w-10"
