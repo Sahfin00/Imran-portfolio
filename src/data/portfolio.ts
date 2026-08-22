@@ -242,12 +242,22 @@ export const skillGroups = [
   },
   {
     title: "Engineering Tools",
-    items: [{ name: "Proteus" }, { name: "LTspice" }],
+    items: [
+      { name: "Proteus" },
+      { name: "LTspice" },
+      { name: "PSpice" },
+      { name: "AutoCAD" },
+    ],
   },
   {
     title: "Productivity",
-    items: [{ name: "Microsoft Office" }],
+    items: [
+      { name: "Microsoft Office" },
+      { name: "Google Workspace" },
+      { name: "LaTeX" },
+    ],
   },
+
   {
     title: "Professional Skills",
     items: [
