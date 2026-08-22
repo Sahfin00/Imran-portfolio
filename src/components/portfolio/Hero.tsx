@@ -5,7 +5,7 @@ import { heroStats, profile } from "@/data/portfolio";
 import { Counter } from "./primitives";
 
 const words = profile.headline.split(" ");
-const portraitUrl = "https://i.postimg.cc/Xq6zg2kj/frmlphto.png";
+const portraitUrl = "/profile.webp";
 
 export function Hero() {
   return (
