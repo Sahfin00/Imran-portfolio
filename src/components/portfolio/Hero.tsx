@@ -92,9 +92,12 @@ export function Hero() {
           <div className="relative overflow-hidden rounded-[2rem] border border-line bg-surface shadow-[var(--shadow-lift)]">
             <motion.img
               src={portraitUrl}
-              width={1024}
-              height={1280}
-              alt="Portrait of Md. Imran Hossain, EEE student at CUET"
+              width={800}
+              height={999}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              alt="Md. Imran Hossain, Electrical and Electronic Engineering (EEE) student at CUET, Chittagong University of Engineering and Technology"
               className="aspect-4/5 w-full object-cover"
               initial={{ scale: 1.08 }}
               animate={{ scale: 1 }}
