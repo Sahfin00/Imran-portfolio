@@ -5,7 +5,7 @@ import { heroStats, profile } from "@/data/portfolio";
 import { Counter } from "./primitives";
 
 const words = profile.headline.split(" ");
-const portraitUrl = "https://i.postimg.cc/Xq6zg2kj/frmlphto.png";
+const portraitUrl = "/profile.png";
 
 export function Hero() {
   return (
@@ -92,9 +92,11 @@ export function Hero() {
           <div className="relative overflow-hidden rounded-[2rem] border border-line bg-surface shadow-[var(--shadow-lift)]">
             <motion.img
               src={portraitUrl}
-              width={1024}
-              height={1280}
-              alt="Portrait of Md. Imran Hossain, EEE student at CUET"
+              width={1000}
+              height={1249}
+              fetchPriority="high"
+              decoding="async"
+              alt="Md. Imran Hossain, Electrical &amp; Electronic Engineering (EEE) student at CUET, Chattogram, Bangladesh"
               className="aspect-4/5 w-full object-cover"
               initial={{ scale: 1.08 }}
               animate={{ scale: 1 }}

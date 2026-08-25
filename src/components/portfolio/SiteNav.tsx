@@ -59,7 +59,7 @@ export function SiteNav() {
       >
         <a href="#home" className="flex items-center gap-2.5">
           <img
-            src="https://i.postimg.cc/Xq6zg2kj/frmlphto.png"
+            src="/profile.png"
             alt="Md. Imran Hossain"
             width={72}
             height={72}
