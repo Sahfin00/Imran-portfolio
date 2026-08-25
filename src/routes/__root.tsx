@@ -79,6 +79,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "author", content: "Md. Imran Hossain" },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Md. Imran Hossain — EEE Portfolio" },
+      { property: "og:locale", content: "en_US" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
