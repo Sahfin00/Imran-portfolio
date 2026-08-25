@@ -10,7 +10,7 @@ export function Footer() {
         <div>
           <p className="font-display text-lg font-semibold text-ink">{profile.name}</p>
           <p className="mt-1 text-sm text-ink-soft">
-            Electrical &amp; Electronic Engineering Student — CUET
+            Electrical &amp; Electronic Engineering — CUET
           </p>
           <p className="mt-4 text-sm italic text-brand">Documenting the journey, one milestone at a time.</p>
         </div>
