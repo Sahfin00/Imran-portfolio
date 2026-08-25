@@ -17,9 +17,9 @@ import { Skills } from "@/components/portfolio/Skills";
 import { StillBuilding } from "@/components/portfolio/StillBuilding";
 import { profile } from "@/data/portfolio";
 
-const title = "Md. Imran Hossain — EEE Student at CUET | Portfolio";
+const title = "Md. Imran Hossain | EEE @ CUET";
 const description =
-  "Portfolio of Md. Imran Hossain (Sahfin Amin Imran), Electrical & Electronic Engineering student at CUET, Chattogram, Bangladesh — electronics and power systems projects including a PIR sensor security alarm and 63 kVA transformer design, plus leadership and campus activities.";
+  "Electrical & Electronic Engineering student at CUET, building a foundation in engineering and technology through hands-on projects, technical exploration, industry exposure, and leadership. Documenting the journey from learning in the classroom to building in the real world.";
 const previewImage = "/profile.png";
 
 export const Route = createFileRoute("/")({
