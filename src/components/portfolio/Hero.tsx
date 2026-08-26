@@ -20,7 +20,7 @@ export function Hero() {
             className="inline-flex items-center gap-2 rounded-full border border-line bg-surface/80 px-3.5 py-1.5 text-xs font-semibold text-ink-soft"
           >
             <span className="h-2 w-2 rounded-full bg-spark" />
-            EEE @ CUET · Batch {profile.batch} · Graduating {profile.graduation}
+            EEE @ CUET · Batch {profile.batch}
           </motion.p>
 
           <h1 className="mt-6 text-[2.6rem] font-semibold leading-[1.05] text-ink sm:text-6xl md:text-[4.1rem]">
