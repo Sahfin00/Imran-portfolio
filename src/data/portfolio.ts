@@ -299,7 +299,7 @@ export const programs: ProgramEntry[] = [
     status: "ongoing",
     statusLabel: "Selected Participant",
     description:
-      "Selected through a competitive selection process to participate in GCI World 2026, an online program covering Data Science, Python, Statistics, and Machine Learning, conducted by the Matsuo-Iwasawa Laboratory at The University of Tokyo.",
+      "Selected through a competitive selection process to participate in GCI World 2026, a program covering Data Science, Python, Statistics, and Machine Learning, conducted by the Matsuo-Iwasawa Laboratory at The University of Tokyo.",
     topics: ["Artificial Intelligence", "Data Science", "Python", "Statistics", "Machine Learning","Deep Learning",],
   },
   {
