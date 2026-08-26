@@ -367,7 +367,7 @@ export const journey = [
 export const stillBuilding = [
   { label: "Current projects", value: "Expanding the electronics project portfolio" },
   { label: "Currently learning", value: "Circuit simulation, Python, power systems" },
-  { label: "Research interests", value: "To be defined through coursework and labs" },
+  { label: "Research interests", value: "Exploring areas through coursework, laboratory work and independent projects." },
   { label: "Technologies exploring", value: "Proteus, LTspice, MATLAB" },
   { label: "Upcoming goals", value: "Internships, technical competitions, research exposure" },
 ];

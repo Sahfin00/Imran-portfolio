@@ -19,12 +19,14 @@ function ProgramCard({ p }: { p: ProgramEntry }) {
   return (
     <article className="surface-card flex h-full flex-col p-6 transition-transform duration-300 hover:-translate-y-1 sm:p-7">
       <div className="flex flex-wrap items-center gap-2">
-        <span
-          className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-[0.68rem] font-bold uppercase tracking-[0.14em] ${statusStyles[p.status]}`}
-        >
-          <GraduationCap className="h-3.5 w-3.5" />
-          {p.statusLabel ?? defaultStatusLabel[p.status]}
-        </span>
+        {p.status !== "ongoing" && (
+          <span
+            className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-[0.68rem] font-bold uppercase tracking-[0.14em] ${statusStyles[p.status]}`}
+          >
+            <GraduationCap className="h-3.5 w-3.5" />
+            {p.statusLabel ?? defaultStatusLabel[p.status]}
+          </span>
+        )}
         <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-ink-soft">
           <CalendarDays className="h-3.5 w-3.5 text-brand" />
           {p.date}
@@ -52,6 +54,11 @@ function ProgramCard({ p }: { p: ProgramEntry }) {
             <Award className="h-4 w-4" />
             View certificate
           </a>
+        ) : p.status === "ongoing" ? (
+          <span className="inline-flex items-center gap-2 rounded-full border border-dashed border-line bg-secondary/60 px-4 py-2 text-sm font-semibold text-ink-soft">
+            <Hourglass className="h-4 w-4 text-brand" />
+            Ongoing
+          </span>
         ) : (
           <span className="inline-flex items-center gap-2 rounded-full border border-dashed border-line bg-secondary/60 px-4 py-2 text-sm font-semibold text-ink-soft">
             <Hourglass className="h-4 w-4 text-brand" />
