@@ -1,6 +1,7 @@
 import { Trophy } from "lucide-react";
 
 import { achievements } from "@/data/portfolio";
+import { ImageLightbox } from "./ImageLightbox";
 import { Counter, Reveal, Section } from "./primitives";
 
 export function Achievements() {
@@ -28,13 +29,22 @@ export function Achievements() {
                   <p className="mt-5 text-sm leading-relaxed text-ink-soft">{a.note}</p>
                 </div>
 
-                <div className="shrink-0 rounded-3xl border border-line bg-secondary/60 px-8 py-7 text-center">
-                  <p className="text-5xl font-semibold text-gradient-brand">
-                    <Counter to={a.metric.value} />
-                  </p>
-                  <p className="mt-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">
-                    {a.metric.label}
-                  </p>
+                <div className="flex shrink-0 flex-col items-center gap-5 sm:flex-row md:flex-col">
+                  {"image" in a && a.image && (
+                    <ImageLightbox
+                      src={a.image.src}
+                      label={a.image.label}
+                      className="aspect-[4/3] w-full max-w-[15rem] sm:w-56"
+                    />
+                  )}
+                  <div className="w-full rounded-3xl border border-line bg-secondary/60 px-8 py-7 text-center sm:w-auto">
+                    <p className="text-5xl font-semibold text-gradient-brand">
+                      <Counter to={a.metric.value} />
+                    </p>
+                    <p className="mt-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">
+                      {a.metric.label}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
