@@ -1,6 +1,7 @@
 import { Award } from "lucide-react";
 
 import { involvement } from "@/data/portfolio";
+import { ImageLightbox } from "./ImageLightbox";
 import { IndustrialTours } from "./IndustrialTours";
 import { Reveal, Section } from "./primitives";
 
@@ -40,6 +41,16 @@ export function Experience() {
                     <div className="mt-5 flex items-center gap-3 rounded-2xl border border-brand/20 bg-brand-soft/70 px-4 py-3">
                       <Award className="h-5 w-5 shrink-0 text-brand" />
                       <p className="text-sm font-semibold text-brand-deep">{item.highlight}</p>
+                    </div>
+                  )}
+                  {item.certificate && (
+                    <div className="mt-5">
+                      <ImageLightbox
+                        src={item.certificate.src}
+                        label={item.certificate.label}
+                        className="aspect-[4/3] w-full max-w-xs"
+                      />
+                      <p className="mt-2 text-xs text-ink-soft">{item.certificate.label}</p>
                     </div>
                   )}
                 </div>

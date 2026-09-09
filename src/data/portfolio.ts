@@ -89,7 +89,9 @@ export type Involvement = {
   period: string;
   points: string[];
   highlight?: string;
+  certificate?: { src: string; label: string };
 };
+
 
 export const involvement: Involvement[] = [
   {
@@ -102,6 +104,10 @@ export const involvement: Involvement[] = [
       "Collected 140 CVs from students and graduates",
     ],
     highlight: "Recognized as Best Campus Ambassador",
+    certificate: {
+      src: "/achievements/best-ca-certificate.jpg",
+      label: "Best Campus Ambassador certificate — JobSpecs 2026",
+    },
   },
   {
     role: "Assistant Secretary",
@@ -111,6 +117,10 @@ export const involvement: Involvement[] = [
       "Involved in career-event organization and coordination",
       "Supported student engagement across fest activities",
     ],
+    certificate: {
+      src: "/achievements/career-fest-certificate.jpg",
+      label: "Assistant Secretary certificate — CUET Career Fest 2026",
+    },
   },
   {
     role: "Executive Member",
@@ -326,6 +336,10 @@ export const achievements = [
     event: "JobSpecs 2026",
     org: "Spectrum — A Professional Skill Development Club, KUET",
     metric: { value: 140, label: "CVs collected" },
+    image: {
+      src: "/achievements/best-ca-crest.jpg",
+      label: "Best Campus Ambassador award crest — JobSpecs 2026",
+    },
     note: "Recognized as Best Campus Ambassador for outreach and engagement during the JobSpecs 2026 National Job Fair campaign.",
   },
 ];
