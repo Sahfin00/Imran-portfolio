@@ -34,14 +34,14 @@ export function Achievements() {
                     <ImageLightbox
                       src={a.image.src}
                       label={a.image.label}
-                      className="aspect-[4/3] w-full max-w-[15rem] sm:w-56"
+                      className="aspect-[4/3] w-full max-w-[20rem] sm:w-72 md:w-80"
                     />
                   )}
-                  <div className="w-full rounded-3xl border border-line bg-secondary/60 px-8 py-7 text-center sm:w-auto">
-                    <p className="text-5xl font-semibold text-gradient-brand">
+                  <div className="w-full rounded-2xl border border-line bg-secondary/60 px-5 py-4 text-center sm:w-auto">
+                    <p className="text-3xl font-semibold text-gradient-brand">
                       <Counter to={a.metric.value} />
                     </p>
-                    <p className="mt-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft">
+                    <p className="mt-1 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-ink-soft">
                       {a.metric.label}
                     </p>
                   </div>

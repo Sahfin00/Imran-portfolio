@@ -29,7 +29,7 @@ export const navSections = [
 ] as const;
 
 export const heroStats = [
-  { value: 140, suffix: "", label: "CVs collected for JobSpecs 2026" },
+  { value: 10, suffix: "+", label: "Events & Initiatives Contributed To" },
   { value: 5, suffix: "+", label: "Organizations & clubs involved" },
   { value: 2, suffix: "", label: "Engineering projects completed" },
 ];
