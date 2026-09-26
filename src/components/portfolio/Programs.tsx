@@ -1,6 +1,7 @@
 import { Award, CalendarDays, ExternalLink, GraduationCap, Hourglass } from "lucide-react";
 
 import { programs, type ProgramEntry } from "@/data/portfolio";
+import { ImageLightbox } from "./ImageLightbox";
 import { Reveal, Section, Tag } from "./primitives";
 
 const statusStyles: Record<ProgramEntry["status"], string> = {
@@ -42,6 +43,14 @@ function ProgramCard({ p }: { p: ProgramEntry }) {
           <Tag key={t}>{t}</Tag>
         ))}
       </div>
+
+      {p.certificateImage && (
+        <ImageLightbox
+          src={p.certificateImage.src}
+          label={p.certificateImage.label}
+          className="mt-5 aspect-[4/3] w-full"
+        />
+      )}
 
       <div className="mt-auto flex flex-wrap items-center gap-3 pt-6">
         {p.certificateUrl ? (
