@@ -317,7 +317,7 @@ export const programs: ProgramEntry[] = [
     title: "Aspire Leaders Program",
     org: "Harvard University — Harvard Business School",
     date: "2026",
-    status: "ongoing",
+    status: "completed",
     description:
       "Selected for a global leadership development program featuring learning and guidance from Harvard faculty and professors, focused on leadership, communication, critical thinking, professional development, and personal growth. Participating in collaborative learning with students from diverse backgrounds and perspectives.",
     topics: [

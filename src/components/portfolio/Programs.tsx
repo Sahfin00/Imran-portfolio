@@ -68,7 +68,7 @@ function ProgramCard({ p }: { p: ProgramEntry }) {
             <Hourglass className="h-4 w-4 text-brand" />
             Ongoing
           </span>
-        ) : (
+        ) : p.certificateImage ? null : (
           <span className="inline-flex items-center gap-2 rounded-full border border-dashed border-line bg-secondary/60 px-4 py-2 text-sm font-semibold text-ink-soft">
             <Hourglass className="h-4 w-4 text-brand" />
             Certificate — Coming Soon
