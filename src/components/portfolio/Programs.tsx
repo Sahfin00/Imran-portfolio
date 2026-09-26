@@ -102,7 +102,7 @@ export function Programs() {
     >
       <div className="grid items-start gap-6 md:grid-cols-2">
         {programs.map((p, i) => (
-          <Reveal key={p.title} delay={i * 0.08} className={p.certificateImage ? "md:col-span-2" : undefined}>
+          <Reveal key={p.title} delay={i * 0.08} className={p.certificateImage ? "md:col-span-2" : ""}>
             <ProgramCard p={p} />
           </Reveal>
         ))}
