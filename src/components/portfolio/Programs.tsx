@@ -18,7 +18,8 @@ const defaultStatusLabel: Record<ProgramEntry["status"], string> = {
 
 function ProgramCard({ p }: { p: ProgramEntry }) {
   return (
-    <article className="surface-card flex h-full flex-col p-6 transition-transform duration-300 hover:-translate-y-1 sm:p-7">
+    <article className="surface-card flex h-full flex-col gap-6 p-6 transition-transform duration-300 hover:-translate-y-1 sm:p-7 md:flex-row md:items-center md:gap-8">
+      <div className="flex min-w-0 flex-1 flex-col">
       <div className="flex flex-wrap items-center gap-2">
         {p.status !== "ongoing" && (
           <span
@@ -43,14 +44,6 @@ function ProgramCard({ p }: { p: ProgramEntry }) {
           <Tag key={t}>{t}</Tag>
         ))}
       </div>
-
-      {p.certificateImage && (
-        <ImageLightbox
-          src={p.certificateImage.src}
-          label={p.certificateImage.label}
-          className="mt-5 aspect-[4/3] w-full"
-        />
-      )}
 
       <div className="mt-auto flex flex-wrap items-center gap-3 pt-6">
         {p.certificateUrl ? (
@@ -87,6 +80,14 @@ function ProgramCard({ p }: { p: ProgramEntry }) {
           </a>
         )}
       </div>
+      </div>
+      {p.certificateImage && (
+        <ImageLightbox
+          src={p.certificateImage.src}
+          label={p.certificateImage.label}
+          className="aspect-[4/3] w-full shrink-0 md:w-80 lg:w-96"
+        />
+      )}
     </article>
   );
 }
@@ -99,7 +100,7 @@ export function Programs() {
       title="Academic programs & certifications"
       lead="Selected programs, courses, certifications and workshops. Certificates appear here once each program is completed."
     >
-      <div className="grid items-start gap-6 md:grid-cols-2">
+      <div className="grid gap-6">
         {programs.map((p, i) => (
           <Reveal key={p.title} delay={i * 0.08}>
             <ProgramCard p={p} />
