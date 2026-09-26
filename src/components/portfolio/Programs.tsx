@@ -100,9 +100,9 @@ export function Programs() {
       title="Academic programs & certifications"
       lead="Selected programs, courses, certifications and workshops. Certificates appear here once each program is completed."
     >
-      <div className="grid items-start gap-6 md:grid-cols-2">
+      <div className="grid gap-6">
         {programs.map((p, i) => (
-          <Reveal key={p.title} delay={i * 0.08} className={p.certificateImage ? "md:col-span-2" : ""}>
+          <Reveal key={p.title} delay={i * 0.08}>
             <ProgramCard p={p} />
           </Reveal>
         ))}
