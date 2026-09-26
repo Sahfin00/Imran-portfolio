@@ -298,6 +298,7 @@ export type ProgramEntry = {
   description: string;
   topics: string[];
   certificateUrl?: string;
+  certificateImage?: { src: string; label: string };
   programUrl?: string;
 };
 
@@ -326,6 +327,10 @@ export const programs: ProgramEntry[] = [
       "Professional Development",
       "Personal Growth",
     ],
+    certificateImage: {
+      src: "/achievements/Aspire-Certificate_1.jpeg",
+      label: "Aspire Leaders Program certificate",
+    },
   },
 ];
 
